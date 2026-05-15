@@ -58,6 +58,9 @@ body{
   text-align:center;
   color:white;
   padding:40px;
+  max-width:500px;
+  width:auto;
+  margin:20px;
 
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(8px);
@@ -75,13 +78,15 @@ body{
 }
 
 input{
-  width:300px;
+  width:100%;
+  max-width:300px;
   padding:15px;
   border:none;
   border-radius:12px;
   outline:none;
   font-size:18px;
   margin-bottom:20px;
+  box-sizing:border-box;
 
   background: rgba(255,255,255,0.9);
 }
@@ -142,4 +147,147 @@ button:hover{
   top:0;
   left:0;
   pointer-events:none;
+}
+
+/* RESPONSIVO - TABLETS (até 1024px) */
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .titulo {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 12px 30px;
+    font-size: 18px;
+  }
+
+  #mensagem {
+    margin-top: 25px;
+    font-size: 24px;
+  }
+
+  .creditos {
+    margin-top: 25px;
+    font-size: 11px;
+  }
+}
+
+/* RESPONSIVO - CELULARES (até 768px) */
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+    width: 95%;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .titulo {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  #mensagem {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  #mensagem h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  #mensagem p {
+    font-size: 16px;
+  }
+
+  .creditos {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+}
+
+/* RESPONSIVO - CELULARES PEQUENOS (até 480px) */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .titulo {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  #mensagem {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+
+  #mensagem h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  #mensagem p {
+    font-size: 14px;
+  }
+
+  .creditos {
+    margin-top: 15px;
+    font-size: 9px;
+  }
 }
